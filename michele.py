@@ -12,6 +12,7 @@ import feedparser
 from html_to_telegraph import *
 from errors import *
 import os
+import time
 
 TOKEN_TELEGRAM = os.environ['TOKEN_TELEGRAM'] 
 bot = telegram.Bot(TOKEN_TELEGRAM)
@@ -74,7 +75,7 @@ def getArticles( bot, job ):
 				for chat_id in CHAT_ID_LIST:
 					try:
 						bot.sendMessage(parse_mode = "Html", text = text2send, chat_id = int(chat_id) )
-						sleep(3)
+						time.sleep(3)
 					except Exception as e:
 						#messaggio non inviato...perche' l'utente ha bloccato il bot???
 						print("Error sending msg to chat_id {}".format(chat_id) )
