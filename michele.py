@@ -11,7 +11,7 @@ import postgresql
 import feedparser
 from html_to_telegraph import *
 from errors import *
-
+import os
 
 TOKEN_TELEGRAM = os.environ['TOKEN_TELEGRAM'] 
 MY_CHAT_ID = int( os.environ['MY_CHAT_ID'] )
