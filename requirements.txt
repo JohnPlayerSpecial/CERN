@@ -1,5 +1,4 @@
 telegraphapi==0.5
-html_telegraph_poster==0.1.27
 python_telegram_bot==7.0.1
 feedparser==5.2.1
 beautifulsoup4==4.6.0
