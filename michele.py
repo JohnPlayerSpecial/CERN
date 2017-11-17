@@ -25,7 +25,7 @@ def init_DB():
 	db = postgresql.open(STRING_DB)
 	ps = db.prepare("CREATE TABLE IF NOT EXISTS url (id serial PRIMARY KEY, url varchar(300) unique);")
 	ps()          
-db.close()
+	db.close()
 
 def getArticles( bot, job ):
 	global STRING_DB
