@@ -92,6 +92,6 @@ updater = Updater(TOKEN_TELEGRAM)
 dp = updater.dispatcher
 updater.dispatcher.add_handler(CommandHandler('start', start))
 j = updater.job_queue
-j.run_repeating(getArticles, 10)
+j.run_repeating(getArticles, 3600)
 updater.start_polling()
 updater.idle()
