@@ -510,7 +510,7 @@ class TelegraphPoster(object):
     def create_api_token(self, short_name, author_name=None, author_url=None):
         token_data = create_api_token(short_name, author_name, author_url, self.user_agent)
         self.access_token = token_data['access_token']
-return token_data
+	return token_data
 
 telegraph = Telegraph()
 telegraph.createAccount("PythonTelegraphAPI")
