@@ -32,7 +32,7 @@ def getArticles( bot, job ):
 	db = postgresql.open(STRING_DB)
 	ps = db.prepare("SELECT * FROM url;")
 	allUrl = [ item[1] for item in ps() ]
-	entries = feedparser.parse( feed ).entries
+	entries = feedparser.parse( feed ).entries[0:10]
 	for post in reversed(entries):
 		if post.link not in allUrl:
 			try:
@@ -91,6 +91,6 @@ updater = Updater(TOKEN_TELEGRAM)
 dp = updater.dispatcher
 updater.dispatcher.add_handler(CommandHandler('start', start))
 j = updater.job_queue
-j.run_repeating(getArticles, 3600)
+j.run_repeating(getArticles, 10)
 updater.start_polling()
 updater.idle()
