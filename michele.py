@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-#17nov17
+#17nov17 @f126ck
 from bs4 import BeautifulSoup
 import feedparser
 import telegram
