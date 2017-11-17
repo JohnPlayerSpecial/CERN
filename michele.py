@@ -12,13 +12,10 @@ import feedparser
 from html_to_telegraph import *
 from errors import *
 
-telegraph = Telegraph()
-telegraph.createAccount("PythonTelegraphAPI")
+
 TOKEN_TELEGRAM = os.environ['TOKEN_TELEGRAM'] 
 MY_CHAT_ID = int( os.environ['MY_CHAT_ID'] )
 
-TOKEN_TELEGRAM = '496480680:AAFRvaQsgVx67UwA2rbWfZAplZPfZ_lvSiI' #
-MY_CHAT_ID_TELEGRAM = 31923577
 bot = telegram.Bot(TOKEN_TELEGRAM)
 STRING_DB = os.environ['DATABASE_URL'].replace("postgres","pq")
 CHAT_ID_LIST = os.environ['CHAT_ID_LIST'].split(",")
