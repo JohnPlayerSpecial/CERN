@@ -10,7 +10,7 @@ from urllib.request import urlopen
 import postgresql
 import feedparser
 from html_to_telegraph import *
-
+from errors import *
 
 telegraph = Telegraph()
 telegraph.createAccount("PythonTelegraphAPI")
