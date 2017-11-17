@@ -39,7 +39,7 @@ def getArticles( bot, job ):
 			try:
 				ps = db.prepare("INSERT INTO url (url) VALUES ('{}') ON CONFLICT (url) DO NOTHING;".format(post.link) )
 				ps()
-				html = urlopen(url).read()
+				html = urlopen(post.link).read()
 				bsObj = BeautifulSoup(html,"html.parser")
 				title = bsObj.findAll("title")[0].text.strip().replace(" | CERN","")
 				body = bsObj.findAll("div", {"class":"field-body"})[0]
