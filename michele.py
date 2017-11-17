@@ -14,12 +14,9 @@ from errors import *
 import os
 
 TOKEN_TELEGRAM = os.environ['TOKEN_TELEGRAM'] 
-MY_CHAT_ID = int( os.environ['MY_CHAT_ID'] )
-
 bot = telegram.Bot(TOKEN_TELEGRAM)
 STRING_DB = os.environ['DATABASE_URL'].replace("postgres","pq")
 CHAT_ID_LIST = os.environ['CHAT_ID_LIST'].split(",")
-
 feed = 'http://home.cern/about/updates/newsletter_feed'
 url = 'http://home.cern/about/updates/2017/11/how-much-does-kilogram-weigh'
 
